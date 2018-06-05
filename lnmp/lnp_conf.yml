@@ -15,6 +15,6 @@
     - restart php-fpm
   handlers:
   - name: restart nginx
-    shell: nginx
+    shell: nginx -s stop;nginx
   - name: restart php-fpm
     service: name=php-fpm state=restarted
