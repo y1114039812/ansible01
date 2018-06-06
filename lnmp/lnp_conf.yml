@@ -1,4 +1,4 @@
-- hosts: 192.168.47.203
+- hosts: 192.168.47.204
   remote_user: root
   tasks:
   - name: copy nginx.conf

@@ -1,0 +1,8 @@
+##install lnp
+ssh-copy-id x.x.x.x
+vim /etc/ansible/hosts --> x.x.x.x
+ansible x.x.x.x -m ping
+ansible x.x.x.x -m script lnp_install.sh
+## copy *.conf
+vim lnp_conf.yml --> hosts: x.x.x.x
+ansible-playbook lnp_conf.yml
