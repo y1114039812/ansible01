@@ -1,0 +1,6 @@
+##inistall agentd
+ssh-copy-id x.x.x.x
+vim /etc/ansible/hosts  --> 添加ip
+ansible x.x.x.x -m ping
+ansible x.x.x.x -m script -a zabbix_agentd.sh 
+注意修改zabbix服务器server_ip
