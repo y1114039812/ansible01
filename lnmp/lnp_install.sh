@@ -20,3 +20,8 @@ yum install -y  php70w-mysql.x86_64   php70w-gd.x86_64   php70w-ldap.x86_64   ph
 yum -y install php70w-fpm
 systemctl start php-fpm
 systemctl enable php-fpm
+systemctl start firewalld;systemctl enable firewalld
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=10050/tcp
+firewall-cmd --reload
+mkdir /home/www

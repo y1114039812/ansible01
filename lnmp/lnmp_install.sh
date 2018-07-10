@@ -27,4 +27,8 @@ rpm -ivh mysql-community-release-el7-5.noarch.rpm
 yum install -y  mysql-server
 chown -R root:root /var/lib/mysql
 systemctl start mysqld;systemctl enable mysqld
-
+systemctl start firewalld;systemctl enable firewalld
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=10050/tcp
+firewall-cmd --reload
+mkdir /home/www
