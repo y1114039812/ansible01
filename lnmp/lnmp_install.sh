@@ -1,11 +1,11 @@
 #!/bin/bash
 # install nginx
 rpm -q wget || yum -y install wget 
-cd /etc/yum.repos.d
-[ -d bak ] || mkdir bak
-mv *.repo bak/
-wget http://mirrors.aliyun.com/repo/Centos-7.repo
-yum clean all;yum repolist
+#cd /etc/yum.repos.d
+#[ -d bak ] || mkdir bak
+#mv *.repo bak/
+#wget http://mirrors.aliyun.com/repo/Centos-7.repo
+#yum clean all;yum repolist
 cd /root
 wget http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 rpm -ivh nginx-release-centos-7-0.el7.ngx.noarch.rpm
