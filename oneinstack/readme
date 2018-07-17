@@ -1,0 +1,5 @@
+## install lnmp with 
+scp lnmp_install.sh 192.168.47.204:/root
+
+##192.168.47.204
+bash /root/lnmp_install.sh
